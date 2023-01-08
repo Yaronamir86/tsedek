@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+
+.answer {
+  margin: 25px auto;
+  font-size: 24px;
+  font-family: "Bellefair", serif;
+  font-weight: 500;
+  padding: 20px;
+  border-right: 8px solid #668283;
+  border-radius: 10px;
+  background-color: rgb(213, 218, 217);
+  transition: all 1s linear;
+}
+
+.answer:hover {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 28px;
+  font-stretch: expanded;
+  font-weight: 700;
+  background-color: rgb(201, 200, 198);
+  box-shadow: 5px 5px 10px black;
+  font-style: #333;
+  border-right: 16px solid #baeff1;
+  height: 100px;
+}
+
+.question {
+  margin: 25px auto;
+  font-size: 24px;
+  font-family: "Bellefair", serif;
+  font-weight: 700;
+  padding: 20px;
+  border-right: 8px solid #668283;
+  border-radius: 10px;
+  background-color: rgb(213, 218, 217);
+  transition: all 1s linear;
+}
+
+.question:hover {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 28px;
+  font-stretch: expanded;
+  font-weight: 700;
+  background-color: rgb(201, 200, 198);
+  border-right: 16px solid  #baeff1;
+  box-shadow: 5px 5px 10px black;
+}
+
+.seperator {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px 0;
+}
