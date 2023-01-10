@@ -2,12 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap");
 
 .logo {
-  font-size: 120px;
+  font-size: 100px;
   text-align: end;
   justify-content: baseline;
   margin: 0 40px 0 40px;
   font-family: "Rubik Storm", cursive;
-  color: rgb(81, 78, 78);
+}
+
+.logo_scrolled {
+  display: none;
 }
 
 .nav {
@@ -21,6 +24,28 @@
   background-size: cover;
   height: 270px;
   width: 1280px;
+  transition: all 0.5s linear;
+}
+
+.nav_scrolled {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(219, 212, 212);
+  background-color:rgb(81, 78, 78);
+  /*background-image: url('/scales.jpeg');
+  background-repeat: no-repeat;
+  background-size:cover;*/
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: auto;
+  opacity: 0.9;
+  z-index: 3;
 }
 
 .link {
@@ -43,6 +68,26 @@
   color: #baeff1;
 }
 
+.link_scrolled {
+  background-color: rgb(121, 121, 122);
+  display: block;
+  width: 120px;
+  padding: 8px 0;
+  margin: 15px;
+  box-shadow: 4px 4px 4px rgb(63, 65, 65);
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+  font-family: "David Libre", serif;
+  max-height: 20px;
+  justify-content: baseline;
+  color: #baeff1;
+}
+
 .links {
   display: flex;
   flex-direction: row;
@@ -53,6 +98,10 @@
   box-shadow: 8px 8px 8px rgb(79, 82, 82);
 }
 
+.link_scrolled:hover {
+  box-shadow: 8px 8px 8px rgb(221, 230, 230);
+}
+
 .link_active {
   display: block;
   width: 120px;
@@ -60,7 +109,7 @@
   margin: 15px;
   box-shadow: 8px 8px 8px rgb(110, 115, 115);
   border-radius: 4px;
-  background: #baeff1;
+  background: #a9cfbc;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -70,7 +119,7 @@
   font-family: "David Libre", serif;
   max-height: 20px;
   justify-content: baseline;
-  color: rgb(92, 92, 93);
+  color: #333;
 }
 
 .typewriter {
@@ -82,4 +131,8 @@
   font-weight: 700;
   color: rgb(81, 78, 78);
   font-style: italic;
+}
+
+.typewriter_scrolled {
+  display: none;
 }

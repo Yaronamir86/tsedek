@@ -2,15 +2,34 @@ import Link from "next/link";
 import styles from "../styles/Nav.module.css";
 import Typewriter from "typewriter-effect";
 import { useRouter } from "next/router";
+import React, { useEffect } from "react";
 
 const Navbar = () => {
   const router = useRouter();
   const currentRoute = router.pathname;
 
+  const [scrolled, setScrolled] = React.useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+
+    if (offset > 70) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className={styles.nav}>
+    <nav className={scrolled ? styles.nav_scrolled : styles.nav}>
       <div className={styles.links}>
-        <Link className={currentRoute === "/" ? styles.link_active : styles.link} href="/">
+        <Link
+          className={currentRoute === "/" ? styles.link_active : styles.link}
+          href="/"
+        >
           בית
         </Link>
         <Link
@@ -53,13 +72,15 @@ const Navbar = () => {
         >
           צור קשר
         </Link>
-        <h1 className={styles.logo}>צדק</h1>
+        <h1 className={scrolled ? styles.logo_scrolled : styles.logo}>צדק</h1>
       </div>
-      <div className={styles.typewriter}>
+      <div
+        className={scrolled ? styles.typewriter_scrolled : styles.typewriter}
+      >
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .typeString("תנו לי לחבר בין הזכויות שלכם לחברת הביטוח..")
+              .typeString("\"תנו לי לחבר בין הזכויות שלכם לחברת הביטוח..\"")
               .callFunction(() => {
                 console.log("String typed out!");
               })

@@ -1,63 +1,62 @@
 .contact__container {
-    display: flex;
-    margin: auto;
-    width: 80%;
+  display: flex;
+  margin: auto;
+  width: 80%;
   display: grid;
   grid-template-columns: 30% 58%;
   gap: 12%;
 }
 
 .contact__options {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .contact__option {
-    padding: 1.0rem;
-    border-radius: 1.2rem;
-    text-align: center;
-    border: 1px solid transparent;
-    transition: all 0.3s ease-in-out;
-    background-color:rgb(213, 218, 217);
+  padding: 1rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(213, 218, 217);
 }
 
 .contact__option:hover {
-    /*background: #98a0a2;*/
-    background-color:transparent;
-    border: 1px solid #333;
+  background-color: transparent;
+  border: 1px solid #333;
 }
 
 .contact__form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .contact__textarea {
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background: rgb(213, 218, 217);
-    border: none ;
-    margin: 0 auto 65px auto;
-  }
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: rgb(213, 218, 217);
+  border: none;
+  margin: 0 auto 65px auto;
+}
 
-  .contact__input {
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background: rgb(213, 218, 217);
-    border: none;
-    display: block;
-    margin:0 auto 65px auto;
-  }
+.contact__input {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: rgb(213, 218, 217);
+  border: none;
+  display: block;
+  margin: 0 auto 65px auto;
+}
 
-  .contact__button {
-    display: block;
+.contact__button {
+  display: block;
   width: 120px;
   padding: 8px 0;
-  margin: 0 ;
+  margin: 0;
   background: rgb(213, 218, 217);
   border-radius: 4px;
   color: #333;
@@ -67,12 +66,12 @@
   font-size: 20px;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
-  font-family: 'David Libre', serif;
+  font-family: "David Libre", serif;
   border: none;
-  }
+}
 
-  .contact__button:hover {
-    background: rgb(92, 92, 93);
-   box-shadow: 8px 8px 8px rgb(179, 181, 181);
-    color: #baeff1;
-  }
+.contact__button:hover {
+  background: rgb(92, 92, 93);
+  box-shadow: 8px 8px 8px rgb(179, 181, 181);
+  color: #baeff1;
+}

@@ -13,8 +13,8 @@
 }
 
 .answer:hover {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 28px;
   font-stretch: expanded;
   font-weight: 700;
@@ -22,7 +22,7 @@
   box-shadow: 5px 5px 10px black;
   font-style: #333;
   border-right: 16px solid #baeff1;
-  height: 100px;
+  
 }
 
 .question {
@@ -38,8 +38,8 @@
 }
 
 .question:hover {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 28px;
   font-stretch: expanded;
   font-weight: 700;
