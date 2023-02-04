@@ -13,7 +13,7 @@ const Navbar = () => {
   const handleScroll = () => {
     const offset = window.scrollY;
 
-    if (offset > 70) {
+    if (offset >= 10) {
       setScrolled(true);
     } else {
       setScrolled(false);
@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav className={scrolled ? styles.nav_scrolled : styles.nav}>
       <div className={styles.links}>
         <Link
-          className={currentRoute === "/" ? styles.link_active : styles.link}
+          className={currentRoute === "/" ? styles.link_active : styles.link }
           href="/"
         >
           בית
@@ -50,9 +50,9 @@ const Navbar = () => {
         </Link>
         <Link
           className={
-            currentRoute === "/OurServices" ? styles.link_active : styles.link
+            currentRoute === "/OurService" ? styles.link_active : styles.link
           }
-          href="/OurServices"
+          href="/OurService"
         >
           סוגי תביעות
         </Link>
@@ -74,21 +74,7 @@ const Navbar = () => {
         </Link>
         <h1 className={scrolled ? styles.logo_scrolled : styles.logo}>צדק</h1>
       </div>
-      <div
-        className={scrolled ? styles.typewriter_scrolled : styles.typewriter}
-      >
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .typeString("\"תנו לי לחבר בין הזכויות שלכם לחברת הביטוח..\"")
-              .callFunction(() => {
-                console.log("String typed out!");
-              })
-              .pauseFor(2500)
-              .start();
-          }}
-        />
-      </div>
+      
     </nav>
   );
 };

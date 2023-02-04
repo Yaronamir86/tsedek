@@ -31,10 +31,10 @@ const Contact = () => {
         <TitleContainer title={"בואו נשמור על קשר..."} />
         <div className={styles.contact__container}>
           <div className={styles.contact__options}>
-            <artical className={styles.contact__option}>
+            <artical className={styles.contact__mail}>
               <MdOutlineEmail className="contact__option-icon" />
-              <h4>Email</h4>
-              <h5>Zahiamir79@gmail.com</h5>
+              <h4 className={styles.contact__inner}>Email</h4>
+              <h5 className={styles.contact__inner}>Zahiamir79@gmail.com</h5>
               <a
                 href="mailto:Zahiamir79@gmail.com"
                 target="_blank"
@@ -43,10 +43,10 @@ const Contact = () => {
                 שלח/י הודעה
               </a>
             </artical>
-            <artical className={styles.contact__option}>
+            <artical className={styles.contact__messenger}>
               <RiMessengerLine className="contact__option-icon" />
-              <h4>Messenger</h4>
-              <h5>אושרת אמיר</h5>
+              <h4 className={styles.contact__inner}>Messenger</h4>
+              <h5 className={styles.contact__inner}>אושרת אמיר</h5>
               <a
                 href="https://m.me/profile.php?id=100049026332642"
                 target="_blank"
@@ -55,10 +55,10 @@ const Contact = () => {
                 שלח/י הודעה
               </a>
             </artical>
-            <artical className={styles.contact__option}>
+            <artical className={styles.contact__whatsapp}>
               <BsWhatsapp className="contact__option-icon" />
-              <h4>Whatsapp</h4>
-              <h5>0504-900-8044</h5>
+              <h4 className={styles.contact__inner}>Whatsapp</h4>
+              <h5 className={styles.contact__inner}>0504-900-8044</h5>
               <a
                 href="https://api.whatsapp.com/send?phone=05049008044"
                 target="_blank"

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Main from '../components/Main';
 import About from './about'
 import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css';
@@ -12,9 +13,7 @@ export default function Home() {
     <Head>
     <title>צדק | בית</title>
   </Head>
-    <div>
-      
-      </div>
+  <Main />
       </>
   )
 }

@@ -1,0 +1,164 @@
+.container {
+  width: 100%;
+}
+
+.lightbox {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  border-color: blue;
+}
+
+.darkbox {
+  background-color: rgb(70, 119, 245);
+  padding-bottom: 50px;
+  height: 100vh;
+  color: azure;
+  border-color: white;
+}
+
+.card {
+  width: 900px;
+  margin: auto;
+}
+
+.article {
+  border-top: 2px dashed;
+  border-color: blue !important;
+  margin: 0;
+  padding: 30px;
+  counter-increment: section;
+  position: relative;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.darkArticle {
+  border-top: 2px dashed;
+  border-color: rgb(253, 253, 253) !important;
+  margin: 0;
+  padding: 30px;
+  counter-increment: section;
+  position: relative;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.article:nth-child(even):before {
+  content: counter(section);
+  right: 100%;
+  margin-right: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px 20px 20px 20px;
+  height: 30px;
+  width: 20px;
+  background-color: blue;
+  align-self: center;
+  color: white;
+  font-size: 110%;
+}
+
+.article:nth-child(odd):before {
+  content: counter(section);
+  left: 100%;
+  margin-left: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px 20px 20px 20px;
+  height: 30px;
+  width: 20px;
+  background-color: blue;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  font-size: 110%;
+}
+
+.article:nth-child(even) {
+  border-left: 2px dashed;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-right: 30px;
+  padding-right: 0;
+}
+
+.article:nth-child(odd) {
+  border-right: 2px dashed;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: 30px;
+  padding-left: 0;
+}
+
+.article:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  padding-top: 80px;
+}
+
+.article:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-bottom: 80px;
+}
+
+.darkArticle:nth-child(even) {
+  border-left: 2px dashed;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-right: 30px;
+  padding-right: 0;
+}
+
+.darkArticle:nth-child(odd) {
+  border-right: white 2px dashed;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: 30px;
+  padding-left: 0;
+}
+
+.darkArticle:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  padding-top: 80px;
+}
+
+.darkArticle:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-bottom: 80px;
+}
+
+.darkArticle:nth-child(even):before {
+  content: counter(section);
+  right: 100%;
+  margin-right: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px 20px 20px 20px;
+  height: 30px;
+  width: 20px;
+  background-color: rgb(247, 247, 247);
+  text-align: center;
+  color: blue;
+  font-size: 110%;
+}
+
+.darkArticle:nth-child(odd):before {
+  content: counter(section);
+  left: 100%;
+  margin-left: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px 20px 20px 20px;
+  height: 30px;
+  width: 20px;
+  background-color: rgb(252, 252, 253);
+  text-align: center;
+  justify-content: center;
+  color: blue;
+  font-size: 110%;
+}

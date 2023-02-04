@@ -3,6 +3,8 @@ import styles from "../styles/info.module.css";
 import info from "../utils/moreInfoData";
 import TitleContainer from "./_Title";
 import { CgAsterisk } from "react-icons/cg";
+import { GrCircleQuestion } from "react-icons/gr";
+import { BsExclamationCircle } from "react-icons/bs";
 
 const MoreInfo = () => {
   return (
@@ -15,9 +17,35 @@ const MoreInfo = () => {
         {info.map(({ question, answer, id }) => {
           return (
             <>
-              <div className={styles.content} key={id}>
-                <p className={styles.question}>{question}</p>
-                <p className={styles.answer}>{answer}</p>
+              <div className={styles.wrapper} key={id}>
+              <GrCircleQuestion
+                    style={{
+                      display: "flex",
+                      padding: "0 20px",
+                      width: "24px",
+                      height: "24px",
+                      margin: "auto",
+                      justifyContent: "center",
+                      alignSelf: "center",
+                    }}
+                  />
+                <p className={styles.question}>
+                  {question}
+                </p>
+                <BsExclamationCircle
+                    style={{
+                      display: "flex",
+                      padding: "0 20px",
+                      margin: "auto",
+                      width: "24px",
+                      height: "24px",
+                      justifyContent: "center",
+                      alignSelf: "center",
+                    }}
+                  />
+                <p className={styles.answer}>
+                  {answer}
+                </p>
               </div>
               <div className={styles.seperator}>
                 <CgAsterisk style={{ width: "25", height: "25" }} />
@@ -27,7 +55,10 @@ const MoreInfo = () => {
             </>
           );
         })}
-        <p>אל תהססו, אל תוותרו על הזכויות שלכם,  תנו לי ללוות אתכם ולהגדיל לכם את הסיכויים להחזר!</p>
+        <p>
+          אל תהססו, אל תוותרו על הזכויות שלכם, תנו לי ללוות אתכם ולהגדיל לכם את
+          הסיכויים להחזר!
+        </p>
       </section>
     </>
   );

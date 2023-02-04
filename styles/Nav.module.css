@@ -2,50 +2,69 @@
 @import url("https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap");
 
 .logo {
-  font-size: 100px;
-  text-align: end;
+  max-width: 100%;
+  font-size: 84px;
+  display: flex;
+  /*align-content: flex-start;*/
   justify-content: baseline;
-  margin: 0 40px 0 40px;
+  margin: 0;
+  margin-right: 90px;
+  flex-grow: 5;
   font-family: "Rubik Storm", cursive;
+  transition: all 1.6s ease-in-out;
 }
 
 .logo_scrolled {
-  display: none;
+  font-size: 46px;
+  font-family: "Rubik Storm", cursive;
+  justify-content: baseline;
+  color: #baeff1;
+  margin: 0 80px;
+  float: left;
+  transition: all 1.6s ease-in-out;
 }
 
 .nav {
   align-items: flex-start;
-  padding-top: 40px;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid rgb(219, 212, 212);
-  background-image: url("/scales.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 270px;
-  width: 1280px;
-  transition: all 0.5s linear;
+  width: 100%;
+  margin: auto;
+  border-bottom: #333 2px solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transition: all 0.8s linear;
 }
 
 .nav_scrolled {
-  align-items: center;
+  background-color: rgb(81, 78, 78);
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  border-bottom: #333 2px solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transition: all 0.8s linear;
+  /*align-items: center;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid rgb(219, 212, 212);
-  background-color:rgb(81, 78, 78);
-  /*background-image: url('/scales.jpeg');
-  background-repeat: no-repeat;
-  background-size:cover;*/
+  background-color: rgb(81, 78, 78);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  height: 80px;
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  margin: auto;
-  opacity: 0.9;
+  margin: 10 auto;
   z-index: 3;
+  transition: all 0.6s linear;*/
 }
 
 .link {
@@ -68,13 +87,13 @@
   color: #baeff1;
 }
 
-.link_scrolled {
-  background-color: rgb(121, 121, 122);
+/*.link_scrolled {
+  background-color:white;
   display: block;
   width: 120px;
   padding: 8px 0;
   margin: 15px;
-  box-shadow: 4px 4px 4px rgb(63, 65, 65);
+  box-shadow: 4px 4px 4px rgb(88, 91, 91);
   border-radius: 4px;
   text-align: center;
   text-decoration: none;
@@ -83,24 +102,32 @@
   text-transform: uppercase;
   transition: all 0.3s linear;
   font-family: "David Libre", serif;
-  max-height: 20px;
   justify-content: baseline;
-  color: #baeff1;
-}
+  color: rgb(88, 91, 91);
+}*/
 
 .links {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 0 40px 0 0;
+  max-width: 100%;
 }
 
 .link:hover {
   box-shadow: 8px 8px 8px rgb(79, 82, 82);
 }
 
-.link_scrolled:hover {
+/*.link_scrolled_active {
   box-shadow: 8px 8px 8px rgb(221, 230, 230);
-}
+  background-color: white;
+}*/
+
+/*.link_scrolled:hover {
+  box-shadow: 8px 8px 8px rgb(221, 230, 230);
+}*/
 
 .link_active {
   display: block;
@@ -109,7 +136,9 @@
   margin: 15px;
   box-shadow: 8px 8px 8px rgb(110, 115, 115);
   border-radius: 4px;
-  background: #a9cfbc;
+  border-right: rgb(92, 92, 93) 6px solid;
+  border-left: rgb(92, 92, 93) 6px solid;
+  background: rgb(217, 249, 237);
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -120,19 +149,4 @@
   max-height: 20px;
   justify-content: baseline;
   color: #333;
-}
-
-.typewriter {
-  align-content: center;
-  display: flex;
-  margin: 90px auto 0 100px;
-  font-size: 28px;
-  font-family: "David Libre", serif;
-  font-weight: 700;
-  color: rgb(81, 78, 78);
-  font-style: italic;
-}
-
-.typewriter_scrolled {
-  display: none;
 }

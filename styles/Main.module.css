@@ -1,0 +1,24 @@
+.wrapper {
+    width: 1440px;
+}
+
+.imageContainer {
+    background-image: url("/scales.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+
+.typewriter {
+    padding: 500px 0 0;
+    justify-content: flex-end;
+    display: flex;
+    margin: auto;
+    font-size: 42px;
+    font-family: "David Libre", serif;
+    font-weight: 700;
+    color: rgb(81, 78, 78);
+    font-style: italic;
+  }

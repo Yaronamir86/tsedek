@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="he" >
       <Head />
       <body dir='rtl'>
-        <Main />
+      <Main />
         <NextScript />
       </body>
     </Html>

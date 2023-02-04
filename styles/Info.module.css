@@ -1,55 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
 
-.answer {
-  margin: 25px auto;
-  font-size: 24px;
-  font-family: "Bellefair", serif;
-  font-weight: 500;
-  padding: 20px;
-  border-right: 8px solid #668283;
-  border-radius: 10px;
-  background-color: rgb(213, 218, 217);
-  transition: all 1s linear;
-}
-
-.answer:hover {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 28px;
-  font-stretch: expanded;
-  font-weight: 700;
-  background-color: rgb(201, 200, 198);
-  box-shadow: 5px 5px 10px black;
-  font-style: #333;
-  border-right: 16px solid #baeff1;
-  
+.wrapper {
+  width: 60%;
+  padding: 40px 0;
 }
 
 .question {
-  margin: 25px auto;
-  font-size: 24px;
+  margin: 15px auto 25px auto;
+  font-size: 28px;
   font-family: "Bellefair", serif;
-  font-weight: 700;
-  padding: 20px;
-  border-right: 8px solid #668283;
-  border-radius: 10px;
-  background-color: rgb(213, 218, 217);
-  transition: all 1s linear;
+  font-weight: 500;
+  padding: 30px 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  line-height: 32px;
+  border-right: 88px solid #668283;
+  border-left: 88px solid #668283;
+  border-start-start-radius: 250px 100px;
+  border-top-left-radius: 10px;
+  background-color: rgb(64, 156, 248);
+  transition: all 0.5s ease-in-out;
+  color: azure;
 }
 
 .question:hover {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 28px;
-  font-stretch: expanded;
-  font-weight: 700;
-  background-color: rgb(201, 200, 198);
-  border-right: 16px solid  #baeff1;
-  box-shadow: 5px 5px 10px black;
+  border: 1px solid #668283;
+  border-right: 108px solid #668283;
+  border-left: 108px solid #668283;
+  box-shadow: 5px 5px 10px rgba(66, 67, 67, 0.177);
+  transform: scale(110%);
 }
+
+
+.answer {
+  margin: 25px auto;
+  font-size: 28px;
+  font-family: "Bellefair", serif;
+  font-weight: 500;
+  padding: 30px 20px;
+  line-height: 32px;
+  display: flex;
+  border-left: 88px solid #668283;
+  border-right: 88px solid #668283;
+  border-end-end-radius: 250px 100px ;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(72, 78, 249);
+  transition: all 0.5s ease-in-out;
+  color: azure;
+}
+
+.answer:hover {
+  transform: scale(110%);
+  box-shadow: 5px 5px 10px rgba(66, 67, 67, 0.177);
+  border: 1px solid #668283;
+  border-left: 108px solid #668283;
+  border-right: 108px solid #668283;
+}
+
 
 .seperator {
   display: flex;
+  flex-direction: row;
   margin: auto;
   justify-content: center;
   align-items: center;
