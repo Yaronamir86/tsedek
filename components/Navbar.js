@@ -4,6 +4,9 @@ import Typewriter from "typewriter-effect";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 
+
+
+
 const Navbar = () => {
   const router = useRouter();
   const currentRoute = router.pathname;
@@ -72,7 +75,7 @@ const Navbar = () => {
         >
           צור קשר
         </Link>
-        <h1 className={scrolled ? styles.logo_scrolled : styles.logo}>צדק</h1>
+        <h1 className={scrolled ? styles.logo_scrolled : styles.logo}></h1>
       </div>
       
     </nav>

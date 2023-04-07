@@ -17,6 +17,7 @@ const FadeInOnScroll = ({ children }) => {
     }
     return () => {
       if (domRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(domRef.current);
       }
     };

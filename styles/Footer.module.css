@@ -1,6 +1,19 @@
 .content {
-    background-color: rgb(92, 92, 93);
-    color: #baeff1 ;
-    max-width: 1440px;
-    padding: 60px 30px 40px;
+  z-index: 10;
+  background-color: #40513b;
+  color: #edf1d6;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 60px 0px;
 }

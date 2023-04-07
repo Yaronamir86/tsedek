@@ -1,0 +1,45 @@
+.container {
+    padding-top: 100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 1440px;
+    background-color: transparent !important;
+    color: #40513B;
+    background-image: url(/circle.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+}
+
+
+.GiScales {
+    width: 52px;
+    height: 52px;
+    z-index: 10;
+    color: #609966;
+  }
+
+  .title {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px 20px;
+    font-size: 84px;
+    font-Family: "Bellefair, serif";
+    font-weight: 700;
+    text-shadow: 1px 1px  rgb(105, 105, 105);
+    z-index: 10;
+  }
+
+  @media screen and ( max-width: 1200px ) {
+
+    .container {
+        max-width: 100%;
+    }
+    .title {
+        font-size: 48px;
+        padding: 30px 20px 30px;
+    }
+  }

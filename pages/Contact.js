@@ -27,14 +27,14 @@ const Contact = () => {
       <Head>
         <title>צדק | צור קשר</title>
       </Head>
-      <div>
+      <div className={styles.bgImage}>
         <TitleContainer title={"בואו נשמור על קשר..."} />
         <div className={styles.contact__container}>
           <div className={styles.contact__options}>
             <artical className={styles.contact__mail}>
               <MdOutlineEmail className="contact__option-icon" />
               <h4 className={styles.contact__inner}>Email</h4>
-              <h5 className={styles.contact__inner}>Zahiamir79@gmail.com</h5>
+              <h5 className={styles.contact__inner}>zhdek23@gmail.com</h5>
               <a
                 href="mailto:Zahiamir79@gmail.com"
                 target="_blank"
@@ -68,7 +68,7 @@ const Contact = () => {
               </a>
             </artical>
           </div>
-          <form className="contact__form" ref={form} onSubmit={sendEmail}>
+          <form className={styles.contact__form} ref={form} onSubmit={sendEmail}>
             <input
               type="text"
               name=""

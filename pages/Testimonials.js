@@ -15,6 +15,7 @@ const Testimonials = () => {
       <Head>
         <title>צדק | סיפורי הצלחה</title>
       </Head>
+      <div className={styles.bgImage}>
       <TitleContainer title={"סיפורי הצלחה"} />
       <section className={styles.section}>
         <Swiper
@@ -27,7 +28,7 @@ const Testimonials = () => {
           {data.map(
             ({ date, title, text1, text2, text3, text4, text5 }, index) => {
               return (
-                <SwiperSlide key={index}>
+                <SwiperSlide key={index} >
                   <div className={styles.card}>
                     <ImAttachment
                       style={{
@@ -54,6 +55,7 @@ const Testimonials = () => {
           )}
         </Swiper>
       </section>
+      </div>
     </>
   );
 };

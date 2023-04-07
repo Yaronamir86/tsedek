@@ -3,43 +3,90 @@ import TitleContainer from "./_Title";
 import serviceData from "../utils/servicesData";
 import styles from "../styles/OurService.module.css";
 import FadeInOnScroll from "../components/FadeInOnScroll";
+import { HiDocumentText, HiDocumentSearch } from "react-icons/hi";
+import { GrDocumentVerified } from "react-icons/gr";
 
 const OurServices = () => {
   return (
     <>
-      <Head>
-        <title>צדק | סוגי תביעות</title>
-      </Head>
-      <section className={styles.container}>
-        <TitleContainer title={"סוגי תביעות"} />
-        {serviceData.map(({ id, base, act, result }) => {
-          return (
-            <>
-              <div className={styles.timeline} key={id}>
+      <div className={styles.bgImage}>
+        <Head>
+          <title>צדק | סוגי תביעות</title>
+        </Head>
+        <section className={styles.container}>
+          <TitleContainer title={"סוגי תביעות"} />
+          {serviceData.map(({ id, headerBase, base, headerAct, result }) => {
+            return (
+              <>
+                <div className={styles.timeline} key={id}>
                   <FadeInOnScroll>
                     <section className={styles.lightbox}>
-                    <div className={styles.card}>
-                      <p className={styles.article}>{base}</p>
-                      <p className={styles.article}>{act}</p>
-                      <p className={styles.article}>{result}</p>
-                    </div>
+                      <div className={styles.card}>
+                        <div className={styles.article}>
+                          <div className={styles.content}>
+                            <div className={styles.header__container}>{headerBase}</div>
+                            <div className={styles.paragraph__container}>
+                              {base}
+                            </div>
+                          </div>
+                          <div className={styles.icon__container}>
+                            <HiDocumentText
+                              style={{
+                                width: "60px",
+                                height: "60px",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignSelf: "center",
+                              }}
+                            />
+                          </div>
+                        </div>
+                        <div className={styles.article}>
+                          <div className={styles.icon__container}>
+                            <HiDocumentSearch
+                              style={{
+                                width: "60px",
+                                height: "60px",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignSelf: "center",
+                              }}
+                            />
+                          </div>
+                          <div className={styles.content}>
+                            <div className={styles.header__container}>{headerAct}</div>
+                            <div className={styles.paragraph__container}>
+                              {base}
+                            </div>
+                          </div>
+                        </div>
+                        <div className={styles.article}>
+                          <div
+                            className={styles.paragraph__container_type_result}
+                          >
+                            {result}
+                          </div>
+                          <div className={styles.icon__container}>
+                            <GrDocumentVerified
+                              style={{
+                                width: "60px",
+                                height: "60px",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignSelf: "center",
+                              }}
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </section>
-                    </FadeInOnScroll>
-                    <FadeInOnScroll>
-                    <section className={styles.darkbox}>
-                    <div className={styles.card}>
-                      <p className={styles.darkArticle}>{base}</p>
-                      <p className={styles.darkArticle}>{act}</p>
-                      <p className={styles.darkArticle}>{result}</p>
-                    </div>
-                    </section>
-                    <div className={styles.seperator}></div>
                   </FadeInOnScroll>
-              </div>
-            </>
-          );
-        })}
-      </section>
+                </div>
+              </>
+            );
+          })}
+        </section>
+      </div>
     </>
   );
 };

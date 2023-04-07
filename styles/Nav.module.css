@@ -1,27 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Karantina:wght@300;700&family=Noto+Rashi+Hebrew:wght@700&family=Rubik+Storm&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap");
 
+
+
+
+
 .logo {
   max-width: 100%;
-  font-size: 84px;
   display: flex;
-  /*align-content: flex-start;*/
   justify-content: baseline;
-  margin: 0;
-  margin-right: 90px;
+  margin: 0 90px 0 40px;
   flex-grow: 5;
   font-family: "Rubik Storm", cursive;
-  transition: all 1.6s ease-in-out;
+  transition: all 1s ease-in-out;
+  padding-bottom: 20px;
+  background-image:url("../public/Logo3.svg") ;
+  background-repeat: no-repeat;
+  width: 138px;
+  height:90px;
+  z-index: 10;
+  font-family: "mirimedium", cursive;
 }
 
 .logo_scrolled {
-  font-size: 46px;
-  font-family: "Rubik Storm", cursive;
+  max-width: 100%;
+  display: flex;
   justify-content: baseline;
-  color: #baeff1;
-  margin: 0 80px;
-  float: left;
-  transition: all 1.6s ease-in-out;
+  margin: 0 90px 0 40px;
+  flex-grow: 5;
+  font-family: "Rubik Storm", cursive;
+  transition: all 1s ease-in-out;
+  padding: 10px 10px  10px 30px;
+  background-image: url("../public/LogoWhite.svg");
+  background-repeat: no-repeat;
+  width: 138px;
+  height: 70px;
 }
 
 .nav {
@@ -30,16 +43,16 @@
   flex-direction: column;
   width: 100%;
   margin: auto;
-  border-bottom: #333 2px solid;
+  border-bottom: #40513B 2px solid;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 1000;
   transition: all 0.8s linear;
 }
 
 .nav_scrolled {
-  background-color: rgb(81, 78, 78);
+  background-color:#40513B ;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -49,96 +62,57 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 1000;
   transition: all 0.8s linear;
-  /*align-items: center;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid rgb(219, 212, 212);
-  background-color: rgb(81, 78, 78);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 10 auto;
-  z-index: 3;
-  transition: all 0.6s linear;*/
+ 
 }
 
 .link {
   display: block;
-  width: 120px;
+  width: 140px;
   padding: 8px 0;
   margin: 15px;
-  box-shadow: 4px 4px 4px rgb(172, 175, 175);
-  border-radius: 4px;
-  background: rgb(92, 92, 93);
+  background-color: #9DC08B;
   text-align: center;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   transition: all 0.3s linear;
   font-family: "David Libre", serif;
-  max-height: 20px;
+  max-height: 22px;
   justify-content: baseline;
-  color: #baeff1;
+  color: #40513B;
+  font-weight: 600;
+  border-radius: 6px;
 }
 
-/*.link_scrolled {
-  background-color:white;
-  display: block;
-  width: 120px;
-  padding: 8px 0;
-  margin: 15px;
-  box-shadow: 4px 4px 4px rgb(88, 91, 91);
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 20px;
-  text-transform: uppercase;
-  transition: all 0.3s linear;
-  font-family: "David Libre", serif;
-  justify-content: baseline;
-  color: rgb(88, 91, 91);
-}*/
+
 
 .links {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 45px;
   margin: 0 40px 0 0;
   max-width: 100%;
 }
 
 .link:hover {
-  box-shadow: 8px 8px 8px rgb(79, 82, 82);
+  box-shadow: 8px 8px 8px #609966;
+  scale: 1.04;
 }
-
-/*.link_scrolled_active {
-  box-shadow: 8px 8px 8px rgb(221, 230, 230);
-  background-color: white;
-}*/
-
-/*.link_scrolled:hover {
-  box-shadow: 8px 8px 8px rgb(221, 230, 230);
-}*/
 
 .link_active {
   display: block;
   width: 120px;
   padding: 8px 0;
   margin: 15px;
-  box-shadow: 8px 8px 8px rgb(110, 115, 115);
+  box-shadow: 7px 7px 7px  #609966;
   border-radius: 4px;
-  border-right: rgb(92, 92, 93) 6px solid;
-  border-left: rgb(92, 92, 93) 6px solid;
-  background: rgb(217, 249, 237);
+  border-right: #9DC08B 6px solid;
+  border-left: #9DC08B 6px solid;
+  background-color: #EDF1D6;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -148,5 +122,83 @@
   font-family: "David Libre", serif;
   max-height: 20px;
   justify-content: baseline;
-  color: #333;
+  color: #40513B;
+  scale: 1.04;
+}
+
+@media  screen and (max-width: 1200px) {
+
+  .logo {
+   width: 100%;
+    display: flex;
+    justify-content: baseline;
+    margin: 0;
+    margin-right: 15px;
+    margin-left: 25px;
+    font-family: "Rubik Storm", cursive;
+    transition: all 1s ease-in-out;
+    padding-bottom: 20px;
+    background-image:url("../public/Logo3.svg") ;
+    background-repeat: no-repeat;
+    height:78px;
+    z-index: 10;
+    font-family: "mirimedium", cursive;
+  }
+
+  .logo_scrolled {
+    max-width: 100%;
+    display: flex;
+    justify-content: baseline;
+    margin: 0;
+    margin-right: 25px;
+    margin-left: 25px;
+    flex-grow: 5;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0 40px 0 0;
+    width: 100%;
+    
+  }
+  .link {
+    font-size: 14px;
+    min-width: 90px;
+    width: fit-content;
+    margin: 5px;
+  }
+
+  .link_active {
+    font-size: 14px;
+    min-width: 80px;
+    width: 80px;
+  }
+}
+
+@media  screen and (max-width: 768px) {
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 20px 0 0;
+    width: 100%;
+    
+  }
+  .link {
+    font-size: 12px;
+    min-width: 58px;
+    width: fit-content;
+  }
+
+  .link_active {
+    font-size: 14px;
+    min-width: 80px;
+    width: 80px;
+  }
 }
