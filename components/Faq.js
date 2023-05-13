@@ -1,8 +1,9 @@
 import React from "react";
 import { GrCircleQuestion } from "react-icons/gr";
-import { BsExclamationCircle } from "react-icons/bs";
+import { HiOutlineExclamationCircle } from "react-icons/hi";
+import { AiOutlineQuestionCircle } from "react-icons/ai";
 import styles from "../styles/Faq.module.css";
-import info from "../utils/moreInfoData";
+import info from "../utils/faqItems";
 
 
 const Faq = () => {
@@ -13,33 +14,16 @@ const Faq = () => {
             <>
               <div className={styles.wrapper} key={id}>
                 <div className={styles.question}>
-                  <GrCircleQuestion
-                    style={{
-                      display: "flex",
-                      padding: "0 20px",
-                      width: "24px",
-                      height: "24px",
-                      margin: "auto",
-                      justifyContent: "center",
-                      alignSelf: "center",
-                      color: "white",
-                    }}
-                  />
+                  <div className={styles.icon}>
+                  <AiOutlineQuestionCircle />
+                  </div>
                   {question}
                 </div>
 
                 <div className={styles.answer}>
-                  <BsExclamationCircle
-                    style={{
-                      display: "flex",
-                      padding: "0 20px",
-                      margin: "auto",
-                      width: "24px",
-                      height: "24px",
-                      justifyContent: "center",
-                      alignSelf: "center",
-                    }}
-                  />
+                  <div className={styles.icon}>
+                  <HiOutlineExclamationCircle />
+                  </div>
                   {answer}
                 </div>
               </div>

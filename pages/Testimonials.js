@@ -8,6 +8,7 @@ import data from "../utils/data";
 import styles from "../styles/Testimonials.module.css";
 import { ImAttachment } from "react-icons/im";
 import TitleContainer from "./_Title";
+import EndPage from "../components/EndPage";
 
 const Testimonials = () => {
   return (
@@ -55,6 +56,7 @@ const Testimonials = () => {
           )}
         </Swiper>
       </section>
+      <EndPage />
       </div>
     </>
   );

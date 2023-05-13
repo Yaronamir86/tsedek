@@ -1,11 +1,8 @@
 import Link from "next/link";
 import styles from "../styles/Nav.module.css";
-import Typewriter from "typewriter-effect";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
-
-
-
+import HamburgerMenu from "./HamburgerMenu";
 
 const Navbar = () => {
   const router = useRouter();
@@ -14,23 +11,30 @@ const Navbar = () => {
   const [scrolled, setScrolled] = React.useState(false);
 
   const handleScroll = () => {
+    const screenWidth = window.innerWidth;
     const offset = window.scrollY;
-
-    if (offset >= 10) {
+  
+    if (screenWidth > 720 && offset >= 10) {
       setScrolled(true);
-    } else {
+    } else if (screenWidth < 720 || offset < 10) {
       setScrolled(false);
     }
   };
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+  
 
   return (
     <nav className={scrolled ? styles.nav_scrolled : styles.nav}>
+      <HamburgerMenu />
       <div className={styles.links}>
         <Link
-          className={currentRoute === "/" ? styles.link_active : styles.link }
+          className={currentRoute === "/" ? styles.link_active : styles.link}
           href="/"
         >
           בית
@@ -61,9 +65,9 @@ const Navbar = () => {
         </Link>
         <Link
           className={
-            currentRoute === "/MoreInfo" ? styles.link_active : styles.link
+            currentRoute === "/FaqList" ? styles.link_active : styles.link
           }
-          href="/MoreInfo"
+          href="/FaqList"
         >
           מידע נוסף
         </Link>
@@ -75,9 +79,9 @@ const Navbar = () => {
         >
           צור קשר
         </Link>
-        <h1 className={scrolled ? styles.logo_scrolled : styles.logo}></h1>
+        
       </div>
-      
+      <div className={scrolled ? styles.logo_scrolled : styles.logo}></div>
     </nav>
   );
 };

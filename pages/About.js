@@ -5,6 +5,7 @@ import FadeInOnScroll from "../components/FadeInOnScroll";
 import Image from "next/image";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Link from "next/link";
+import EndPage from "../components/EndPage";
 
 
 const About = () => {
@@ -69,12 +70,12 @@ const About = () => {
                 שמגיע להם ולפנות אותם להחלים או לטפל ביקירים שלהם.
               </p>
               <Link className={styles.link} href="/Contact">
-                  <div className={styles.arrow1}>
+                  <div className={`${styles.arrow} ${styles.arrow1}`}>
                     <FiChevronLeft />
                     <FiChevronLeft />
                   </div>
                   <span>לחץ ליצירת קשר</span>
-                  <div className={styles.arrow2}>
+                  <div className={`${styles.arrow} ${styles.arrow2}`}>
                     <FiChevronRight />
                     <FiChevronRight />
                   </div>
@@ -82,6 +83,7 @@ const About = () => {
             </FadeInOnScroll>
           </article>
         </section>
+        <EndPage />
       </div>
     </>
   );

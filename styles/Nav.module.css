@@ -1,89 +1,93 @@
-@import url("https://fonts.googleapis.com/css2?family=Karantina:wght@300;700&family=Noto+Rashi+Hebrew:wght@700&family=Rubik+Storm&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap");
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&display=swap');
 
 
 .logo {
-  max-width: 100%;
+  max-width: 20%;
   display: flex;
   justify-content: baseline;
   margin: 0 90px 0 40px;
   flex-grow: 5;
-  font-family: "Rubik Storm", cursive;
-  transition: all 1s ease-in-out;
-  padding-bottom: 20px;
-  background-image:url("../public/Logo3.svg") ;
+  transition: all 0.8s linear;
+  padding:15px;
+  background-image:url("../public/logoDark.png") ;
   background-repeat: no-repeat;
-  width: 138px;
-  height:90px;
+  background-size: contain;
+  background-position: center;
+  width: 100px;
+  height:40px;
   z-index: 10;
   font-family: "mirimedium", cursive;
 }
 
 .logo_scrolled {
-  max-width: 100%;
+  max-width: 20%;
   display: flex;
   justify-content: baseline;
   margin: 0 90px 0 40px;
-  flex-grow: 5;
-  font-family: "Rubik Storm", cursive;
-  transition: all 1s ease-in-out;
-  padding: 10px 10px  10px 30px;
-  background-image: url("../public/LogoWhite.svg");
+  flex-grow:1;
+  transition: all 0.8s linear;
+  background-image:url("../public/logoBright.png") ;
   background-repeat: no-repeat;
-  width: 138px;
-  height: 70px;
+  background-size: contain;
+  background-position: center;
+  width: 100px;
+  height:60px;
+  z-index: 10;
+  font-family: "mirimedium", cursive;
 }
 
 .nav {
   align-items: flex-start;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   margin: auto;
-  border-bottom: #40513B 2px solid;
+  border-bottom: #40513B 1.5px solid;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 20;
   transition: all 0.8s linear;
+  padding: 15px 0 15px;
 }
 
 .nav_scrolled {
-  background-color:#40513B ;
+  background-color:var(--color-dark) ;
+  background-image: url("../public/NavBg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   align-items: flex-start;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   margin: auto;
   border-bottom: #333 2px solid;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 20;
   transition: all 0.8s linear;
- 
+  padding: 6px 0 6px;
 }
 
 .link {
   display: block;
-  width: 140px;
+  width: 150px;
   padding: 8px 0;
   margin: 15px;
-  background-color: #9DC08B;
+  background-color: var(--color-primary);
   text-align: center;
   text-decoration: none;
   font-size: 18px;
   text-transform: uppercase;
-  transition: all 0.3s linear;
-  font-family: "David Libre", serif;
+  transition: all 0.2s linear;
+  font-family: 'Fredoka', sans-serif;
   max-height: 22px;
   justify-content: baseline;
-  color: #40513B;
+  color: var(--color-dark-variant);
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px -5px;
 }
 
 
@@ -91,59 +95,50 @@
 .links {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 45px;
   margin: 0 40px 0 0;
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .link:hover {
-  box-shadow: 8px 8px 8px #609966;
-  scale: 1.04;
+  box-shadow: 0 10px 8px -8px ;
+  scale: 1.02;
+  /*color: var(--color-light);
+  background-color: var(--color-primary-variant);*/
 }
 
 .link_active {
   display: block;
-  width: 120px;
+  width: 150px;
   padding: 8px 0;
   margin: 15px;
-  box-shadow: 7px 7px 7px  #609966;
-  border-radius: 4px;
-  border-right: #9DC08B 6px solid;
-  border-left: #9DC08B 6px solid;
-  background-color: #EDF1D6;
+  box-shadow: 0 8px 8px -8px ;
+  border-radius: 5px;
+  border-right: #62d9b1 6px solid;
+  border-left: #62d9b1 6px solid;
+  background-color: var(--color-light);
   text-align: center;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
   text-transform: uppercase;
   transition: all 0.4s ease-in-out;
-  font-family: "David Libre", serif;
+  font-family: 'Fredoka', sans-serif;
   max-height: 20px;
   justify-content: baseline;
-  color: #40513B;
-  scale: 1.04;
+  color: var(--color-dark);
+  scale: 1.03;
 }
 
-@media  screen and (max-width: 1200px) {
+@media  screen and (max-width: 1024px) {
 
   .logo {
-   width: 100%;
-    display: flex;
-    justify-content: baseline;
-    margin: 0;
-    margin-right: 15px;
-    margin-left: 25px;
-    font-family: "Rubik Storm", cursive;
-    transition: all 1s ease-in-out;
-    padding-bottom: 20px;
-    background-image:url("../public/Logo3.svg") ;
-    background-repeat: no-repeat;
-    height:78px;
-    z-index: 10;
-    font-family: "mirimedium", cursive;
+    margin-left: 30px;
+    margin-right: 50px;
   }
+
 
   .logo_scrolled {
     max-width: 100%;
@@ -151,43 +146,52 @@
     justify-content: baseline;
     margin: 0;
     margin-right: 25px;
-    margin-left: 25px;
     flex-grow: 5;
   }
 
   .links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin: 0 40px 0 0;
-    width: 100%;
+    gap: 10px;
+    margin: 0 25px 0 0;
+    
     
   }
   .link {
     font-size: 14px;
-    min-width: 90px;
-    width: fit-content;
-    margin: 5px;
+    min-width: 70px;
+    max-width: fit-content;
+    margin:5px;
   }
 
   .link_active {
     font-size: 14px;
-    min-width: 80px;
+    min-width: 85px;
     width: 80px;
   }
 }
 
 @media  screen and (max-width: 768px) {
-  .links {
+
+
+  .nav {
+    align-items: flex-start;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+  .logo {
+    width: 100%;
+     display: flex;
+     justify-content: baseline;
+     margin: 0;
+     width: 40px;
+     height:35px;
+    
+   }
+  .links {
     gap: 10px;
     margin: 0 20px 0 0;
-    width: 100%;
+    
     
   }
   .link {
@@ -200,5 +204,39 @@
     font-size: 14px;
     min-width: 80px;
     width: 80px;
+  }
+}
+
+@media  screen and (max-width: 720px) {
+
+  .nav {
+    border: none;
+  }
+
+
+  .link {
+    visibility: hidden;
+  }
+
+  .links {
+    width: 10px;
+    justify-content: right;
+  }
+
+  .link_active {
+    visibility: hidden;
+  }
+
+  .logo {
+    display: none;
+    float: left;
+    flex-grow: 2;
+    height: inherit;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .nav_scrolled {
+    background-color: inherit;
   }
 }

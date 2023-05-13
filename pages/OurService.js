@@ -5,6 +5,7 @@ import styles from "../styles/OurService.module.css";
 import FadeInOnScroll from "../components/FadeInOnScroll";
 import { HiDocumentText, HiDocumentSearch } from "react-icons/hi";
 import { GrDocumentVerified } from "react-icons/gr";
+import EndPage from "../components/EndPage";
 
 const OurServices = () => {
   return (
@@ -20,72 +21,51 @@ const OurServices = () => {
               <>
                 <div className={styles.timeline} key={id}>
                   <FadeInOnScroll>
-                    <section className={styles.lightbox}>
-                      <div className={styles.card}>
-                        <div className={styles.article}>
-                          <div className={styles.content}>
-                            <div className={styles.header__container}>{headerBase}</div>
-                            <div className={styles.paragraph__container}>
-                              {base}
-                            </div>
+                    <div className={styles.card}>
+                      <div className={styles.article}>
+                        <div className={styles.content}>
+                          <div className={styles.header__container}>
+                            {headerBase}
                           </div>
-                          <div className={styles.icon__container}>
-                            <HiDocumentText
-                              style={{
-                                width: "60px",
-                                height: "60px",
-                                display: "flex",
-                                justifyContent: "center",
-                                alignSelf: "center",
-                              }}
-                            />
+                          <div className={styles.paragraph__container}>
+                            {base}
                           </div>
                         </div>
-                        <div className={styles.article}>
-                          <div className={styles.icon__container}>
-                            <HiDocumentSearch
-                              style={{
-                                width: "60px",
-                                height: "60px",
-                                display: "flex",
-                                justifyContent: "center",
-                                alignSelf: "center",
-                              }}
-                            />
-                          </div>
-                          <div className={styles.content}>
-                            <div className={styles.header__container}>{headerAct}</div>
-                            <div className={styles.paragraph__container}>
-                              {base}
-                            </div>
-                          </div>
+                        <div className={styles.icon__container}>
+                          <HiDocumentText className={`${styles.icon} ${styles.icon_type_text}`} />
                         </div>
-                        <div className={styles.article}>
-                          <div
-                            className={styles.paragraph__container_type_result}
-                          >
-                            {result}
+                      </div>
+                      <div className={styles.article}>
+                        <div className={styles.icon__container}>
+                          <HiDocumentSearch className={`${styles.icon} ${styles.icon_type_search}`} />
+                        </div>
+                        <div className={styles.content}>
+                          <div className={styles.header__container}>
+                            {headerAct}
                           </div>
-                          <div className={styles.icon__container}>
-                            <GrDocumentVerified
-                              style={{
-                                width: "60px",
-                                height: "60px",
-                                display: "flex",
-                                justifyContent: "center",
-                                alignSelf: "center",
-                              }}
-                            />
+                          <div className={styles.paragraph__container}>
+                            {base}
                           </div>
                         </div>
                       </div>
-                    </section>
+                      <div className={styles.article}>
+                        <div
+                          className={styles.paragraph__container_type_result}
+                        >
+                          {result}
+                        </div>
+                        <div className={styles.icon__container}>
+                          <GrDocumentVerified className={`${styles.icon} ${styles.icon_type_verified}`} />
+                        </div>
+                      </div>
+                    </div>
                   </FadeInOnScroll>
                 </div>
               </>
             );
           })}
         </section>
+        <EndPage />
       </div>
     </>
   );

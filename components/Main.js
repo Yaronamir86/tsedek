@@ -1,5 +1,8 @@
 import Typewriter from "typewriter-effect";
 import styles from "../styles/Main.module.css";
+import HowItWorks from "../components/HowItWorks";
+import EndPage from "./EndPage";
+import FAQList from "../pages/FaqList";
 
 const Main = () => {
   return (
@@ -20,6 +23,8 @@ const Main = () => {
             />
           </div>
         </div>
+        <HowItWorks />
+        <EndPage />
       </main>
     </>
   );

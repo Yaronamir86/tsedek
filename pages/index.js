@@ -12,7 +12,6 @@ export default function Home() {
         <title>צדק | בית</title>
       </Head>
       <Main />
-      <Testimonials />
     </>
   );
 }

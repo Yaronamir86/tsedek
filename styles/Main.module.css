@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
 .wrapper {
   width: 100%;
   position: relative;
@@ -8,6 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -16,9 +19,8 @@
   justify-content: flex-end;
   display: flex;
   margin: auto;
-  font-size: 42px;
-  font-family: "David Libre", serif;
-  font-weight: 700;
-  color: rgb(81, 78, 78);
-  font-style: italic;
+  font-size: 48px;
+  font-family: 'Secular One', sans-serif;
+  color: var(--color-dark);
+  padding-left: 20px;
 }

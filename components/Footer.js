@@ -1,21 +1,24 @@
 import Image from "next/image";
 import styles from "../styles/Footer.module.css"
+import { IoLogoWhatsapp} from "react-icons/io"
+import { MdEmail} from "react-icons/md"
+import { BsFacebook} from "react-icons/bs";
 
 function Footer() {
   return (
     <div className={styles.content}>
       <div className={styles.socials}>
-        <div >
-          <p style={{paddingBottom: "15px"}}>WhatsApp: 0504-900-8044</p>
-          <p style={{paddingBottom: "15px"}}>Email: zhdek23@gmail.com</p>
-          <p style={{paddingBottom: "15px"}}>Facebook: your-facebook-page-url</p>
-        </div>
+        <ul className={styles.socialList}>
+          <li className={styles.socialLink}><IoLogoWhatsapp className={styles.linkIcon}/> 0504-900-8044</li>
+          <li className={styles.socialLink}><MdEmail/> zhdek23@gmail.com</li>
+          <li className={styles.socialLink}><BsFacebook /> your-facebook-page-url</li>
+        </ul>
         <div>
-          <Image src="./LogoWhite.svg" alt="Logo" width={160}
-  height={120}/>
+          <Image src="/logoBright.png" alt="Logo" width={140}
+  height={120} className={styles.image}/>
         </div>
       </div>
-      <div style={{ textAlign: 'center', padding: '20px' }}>
+      <div className={styles.copyrights}>
         <p> {new Date().getFullYear()} yaron amir. All rights reserved.</p>
       </div>
     </div>

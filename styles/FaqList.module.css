@@ -1,0 +1,116 @@
+.bgImage {
+  background-image: url("../public/scales.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--color-light);
+  opacity: 1;
+}
+
+.faq {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  width: 1080px;
+  column-gap: 20px;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+
+.answer {
+  max-height: 5px;
+  overflow: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.5s linear;
+  background-color: var(--color-light);
+  width: 80%;
+  margin: auto;
+  font-size: 18px;
+}
+
+.answer.show {
+  min-height: 100px;
+  opacity: 1;
+  transition: all 0.5s linear;
+  background-color: var(--color-light);
+  width: 80%;
+  margin: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  padding-top: 20px;
+  background-color: var(--color-primary);
+  scale: 1.04;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-light);
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  transition: all 0.5s linear;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.question.show {
+    border-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    transition: all 0.5s linear;
+    background-color: var(--color-primary);
+    scale: 1.04;
+}
+
+
+.toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  transition: all 0.5s linear;
+  color: var(--color-dark);
+  font-family: 'Varela Round', sans-serif;
+  width: 100%;
+}
+
+.question:hover {
+  background-color: var(--color-primary);
+  transition: all 0.5s linear;
+}
+
+.paragraph {
+  font-size: 18px;
+  color: var(--color-dark);
+  font-weight: 600;
+  width: 90%;
+  margin: auto;
+}
+
+.paragraph:first-of-type{
+  margin-top: 12px;
+}
+
+.paragraph:last-of-type{
+  margin-bottom: 12px;
+}
+
+.icon {
+  height: 100%;
+  color: var(--color-dark);
+}
+
+.icon.show {
+  color: var(--color-light)
+}
+
+.toggle:hover .icon {
+  color: var(--color-light);
+}
